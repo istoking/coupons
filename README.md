@@ -27,7 +27,8 @@ Same as example below make sure they are in ''s and that AMOUNT is a number.
 https://i.imgur.com/IhSoSrO.png
 
 # Commands ingame 
-- `/createcode [type] [amount]` - Creates a Code for money or items (Only for ADMIN group) - Where [type] can be `money` or `item-name`
+- `/createcode [type] [amount]` - Creates a Code for money or items (Only for ADMIN group) 
+- Where [type] can be `money` or `item-name`
 - `/createcodew [weapon_hash] [amount]` - Creates a Code for weapons (Only for ADMIN group)
 - `/redeem [code]` - Redeem a Given Code for money or items
 - `/redeemw [code]` - Redeem a Given Code for weapons
