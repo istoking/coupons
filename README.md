@@ -2,7 +2,7 @@
 Create coupons for items, money or weapons so players can redeem them, or tie it to tebex for automation
 
 ## Setup
-1. SQL file should be run. Once Heidi Opens up, select ur database, and Run the SQL. This will create a CODES table in the DB.
+1. SQL file should be run. This will create a CODES table in the DB.
 2. Put the Script in your resources, and start it in cfg file. 
 
 # Commands ingame 
