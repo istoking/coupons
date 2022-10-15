@@ -24,7 +24,7 @@ Same as example below make sure they are in ''s and that AMOUNT is a number.
 2. Example of how to redeem a tebex transaction - `/redeem tbx-43725621a42940-35b945-7` 
 
 ## Tebex example Picture
-https://imgur.com/f9IIQZ3
+https://i.imgur.com/IhSoSrO.png
 
 # Commands ingame 
 - `/createcode [type] [amount]` - Creates a Code for money or items (Only for ADMIN group) - Where [type] can be `money` or `item-name`
