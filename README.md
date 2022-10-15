@@ -1,5 +1,4 @@
 ## VORPCORE | COUPONS - REDEEM | Create Coupon Codes for your Players or let Tebex do it! 
-## players can redeem ingame!
 
 # Setup
 1. Run the SQL File 
