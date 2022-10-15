@@ -99,7 +99,7 @@ RegisterCommand('createcode', function(source, args, rawCommand)
         Citizen.Wait(100)
 
         local message = 'Code Generated - '..output..''
-		TriggerClientEvent('chatMessage', source, message)
+	TriggerClientEvent('chatMessage', source, message)
         exports.oxmysql:execute('INSERT INTO codes (code, type, amount, status, madeby) VALUES (@output, @type, @amount, @status, @madeby)', {
             ['@output'] = output,
             ['@type'] = type,
@@ -135,7 +135,7 @@ RegisterCommand('createcodew', function(source, args, rawCommand)
         Citizen.Wait(100)
 
         local message = 'Code Generated - '..output..''
-		TriggerClientEvent('chatMessage', source, message)
+	TriggerClientEvent('chatMessage', source, message)
         exports.oxmysql:execute('INSERT INTO codes (code, type, amount, status, madeby) VALUES (@output, @type, @amount, @status, @madeby)', {
             ['@output'] = output,
             ['@type'] = type,
