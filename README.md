@@ -1,4 +1,4 @@
-## VORPCORE | COUPONS
+## VORPCORE (A REDM Framework)
 ## Create Coupon Codes for your Players or let Tebex do it! 
 
 # Setup
