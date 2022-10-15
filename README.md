@@ -6,7 +6,7 @@
 
 # How to use with TEBEX 
 1. Link your DATABASE to Tebex as a game server.
-2. Add in this as the command - 
+2. Add this as the command: 
 ```sql
 INSERT INTO `codes` VALUES ('{transaction}-7' , 'item-name or money', 'AMOUNT', '0', 'TEBEX', NULL);
 ```
