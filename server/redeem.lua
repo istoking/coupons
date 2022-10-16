@@ -10,7 +10,6 @@ local stringlength = Config.Length
 
 RegisterCommand('redeem', function(source, args, rawCommand)
     local Character = VorpCore.getUser(source).getUsedCharacter
-    local id = Character.identifier
     local target = source
     exports.oxmysql:execute('SELECT * FROM codes WHERE code = @playerCode', {['@playerCode'] = args[1]}, function(result)
         if (result[1]) ~= nil then
@@ -49,7 +48,6 @@ end)
 
 RegisterCommand('redeemw', function(source, args, rawCommand)
     local Character = VorpCore.getUser(source).getUsedCharacter
-    local id = Character.identifier
     local target = source
     exports.oxmysql:execute('SELECT * FROM codes WHERE code = @playerCode', {['@playerCode'] = args[1]}, function(result)
         if (result[1]) ~= nil then
@@ -91,7 +89,7 @@ RegisterCommand('createcode', function(source, args, rawCommand)
         local keyLength = stringlength
         local output = ""
 
-        for	i = 1, keyLength do
+        for i = 1, keyLength do
             local rand = math.random(#characterSet)
             output = output .. string.sub(characterSet, rand, rand)
         end
@@ -127,7 +125,7 @@ RegisterCommand('createcodew', function(source, args, rawCommand)
         local keyLength = stringlength
         local output = ""
 
-        for	i = 1, keyLength do
+        for i = 1, keyLength do
             local rand = math.random(#characterSet)
             output = output .. string.sub(characterSet, rand, rand)
         end
