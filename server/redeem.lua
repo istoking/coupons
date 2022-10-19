@@ -69,6 +69,8 @@ RegisterCommand('redeemw', function(source, args, rawCommand)
                 else
                     TriggerClientEvent("vorp:TipBottom", target, "You can't carry any more WEAPONS", 5000)
                 end
+            end)
+            
             else
                 TriggerClientEvent("vorp:TipBottom", target, "Code has been already Redeemed!", 5000)
             end
