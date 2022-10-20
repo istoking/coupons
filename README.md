@@ -1,6 +1,9 @@
 ## VORPCORE (A REDM Framework)
 ## Create Coupon Codes for your Players or let Tebex do it! 
 
+## Requirements
+- [VORP_Core](https://github.com/VORPCORE/vorp-core-lua)
+
 # Setup
 1. Run the SQL File 
 2. Put the Script in your resources, and start it in cfg file. 
