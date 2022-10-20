@@ -58,18 +58,18 @@ RegisterCommand('redeemw', function(source, args, rawCommand)
 
             if status == 0 then
                 TriggerEvent("vorpCore:canCarryWeapons", tonumber(target), 1, function(canCarry)
-                if canCarry then
-                    VorpInv.createWeapon(target, type)
-                    TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
-                    exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
-                        ['@status'] = 1,
-                        ['@usedby'] = Character.firstname,
-                        ['@code'] = code
-                    })
-                else
-                    TriggerClientEvent("vorp:TipBottom", target, "You can't carry any more WEAPONS", 5000)
-                end
-            end)
+                    if canCarry then
+                        VorpInv.createWeapon(target, type)
+                        TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
+                        exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
+                            ['@status'] = 1,
+                            ['@usedby'] = Character.firstname,
+                            ['@code'] = code
+                        })
+                    else
+                        TriggerClientEvent("vorp:TipBottom", target, "You can't carry any more WEAPONS", 5000)
+                    end
+                end)
             
             else
                 TriggerClientEvent("vorp:TipBottom", target, "Code has been already Redeemed!", 5000)
