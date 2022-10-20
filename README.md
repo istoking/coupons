@@ -39,7 +39,7 @@ https://i.imgur.com/IhSoSrO.png
 # Examples ingame
 `/createcode money 50000` // returns code with Rewards as 50K
 
-`/createcode electronic_kit 15` // returns code with Rewards 15 Electronic Kits
+`/createcode consumable_coffee 2` // returns code with Rewards 2 Consumable Coffee's
 
 `/createcodew WEAPON_MELEE_KNIFE_JAWBONE 1` // returns code with weapon
 
