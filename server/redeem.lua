@@ -22,7 +22,7 @@ RegisterCommand('redeem', function(source, args, rawCommand)
 
                 if type == 'money' then
                     Character.addCurrency(Config.MoneyType, amount)
-                    TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
+                    TriggerClientEvent("vorp:ShowBottomRight", target, "Successfully Redeemed A Code", 5000)
                     exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                         ['@status'] = 1,
                         ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
@@ -30,7 +30,7 @@ RegisterCommand('redeem', function(source, args, rawCommand)
                     })
                 else
                     VorpInv.addItem(target, type, amount)
-                    TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
+                    TriggerClientEvent("vorp:ShowBottomRight", target, "Successfully Redeemed A Code", 5000)
                     exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                         ['@status'] = 1,
                         ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
@@ -60,22 +60,22 @@ RegisterCommand('redeemw', function(source, args, rawCommand)
                 TriggerEvent("vorpCore:canCarryWeapons", tonumber(target), 1, function(canCarry)
                     if canCarry then
                         VorpInv.createWeapon(target, type)
-                        TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
+                        TriggerClientEvent("vorp:ShowBottomRight", target, "Successfully Redeemed A Code", 5000)
                         exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                             ['@status'] = 1,
                             ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
                             ['@code'] = code
                         })
                     else
-                        TriggerClientEvent("vorp:TipBottom", target, "You can't carry any more WEAPONS", 5000)
+                        TriggerClientEvent("vorp:ShowBottomRight", target, "You can't carry any more WEAPONS", 5000)
                     end
                 end)
             
             else
-                TriggerClientEvent("vorp:TipBottom", target, "Code has been already Redeemed!", 5000)
+                TriggerClientEvent("vorp:ShowBottomRight", target, "Code has been already Redeemed!", 5000)
             end
         else
-            TriggerClientEvent("vorp:TipBottom", target, "Code is not valid! - Codes are case Sensitive!", 5000)          
+            TriggerClientEvent("vorp:ShowBottomRight", target, "Code is not valid! - Codes are case Sensitive!", 5000)          
         end
     end)
 end)
@@ -112,7 +112,7 @@ RegisterCommand('createcode', function(source, args, rawCommand)
             ['@madeby'] = Character.firstname .. ' ' .. Character.lastname,
         })
     else
-        TriggerClientEvent("vorp:TipBottom", source, "You do not have permission to type this command!", 5000)
+        TriggerClientEvent("vorp:ShowBottomRight", source, "You do not have permission to type this command!", 5000)
     end
 end)
 
@@ -148,6 +148,6 @@ RegisterCommand('createcodew', function(source, args, rawCommand)
             ['@madeby'] = Character.firstname .. ' ' .. Character.lastname,
         })
     else
-        TriggerClientEvent("vorp:TipBottom", source, "You do not have permission to type this command!", 5000)
+        TriggerClientEvent("vorp:ShowBottomRight", source, "You do not have permission to type this command!", 5000)
     end
 end)
