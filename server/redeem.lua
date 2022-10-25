@@ -25,7 +25,7 @@ RegisterCommand('redeem', function(source, args, rawCommand)
                     TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
                     exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                         ['@status'] = 1,
-                        ['@usedby'] = Character.firstname,
+                        ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
                         ['@code'] = code
                     })
                 else
@@ -33,7 +33,7 @@ RegisterCommand('redeem', function(source, args, rawCommand)
                     TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
                     exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                         ['@status'] = 1,
-                        ['@usedby'] = Character.firstname,
+                        ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
                         ['@code'] = code
                     })
                 end
@@ -63,7 +63,7 @@ RegisterCommand('redeemw', function(source, args, rawCommand)
                         TriggerClientEvent("vorp:TipBottom", target, "Successfully Redeemed A Code", 5000)
                         exports.oxmysql:execute('UPDATE codes SET status=@status, usedby=@usedby WHERE code=@code', {
                             ['@status'] = 1,
-                            ['@usedby'] = Character.firstname,
+                            ['@usedby'] = Character.firstname .. ' ' .. Character.lastname,
                             ['@code'] = code
                         })
                     else
@@ -109,7 +109,7 @@ RegisterCommand('createcode', function(source, args, rawCommand)
             ['@type'] = type,
             ['@amount'] = amount,
             ['@status'] = 0,
-            ['@madeby'] = Character.firstname,
+            ['@madeby'] = Character.firstname .. ' ' .. Character.lastname,
         })
     else
         TriggerClientEvent("vorp:TipBottom", source, "You do not have permission to type this command!", 5000)
@@ -145,7 +145,7 @@ RegisterCommand('createcodew', function(source, args, rawCommand)
             ['@type'] = type,
             ['@amount'] = amount,
             ['@status'] = 0,
-            ['@madeby'] = Character.firstname,
+            ['@madeby'] = Character.firstname .. ' ' .. Character.lastname,
         })
     else
         TriggerClientEvent("vorp:TipBottom", source, "You do not have permission to type this command!", 5000)
