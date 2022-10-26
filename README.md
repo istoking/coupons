@@ -46,3 +46,6 @@ https://i.imgur.com/IhSoSrO.png
 `/redeem un$i9KuZmV` // redeems code
 
 Original Code from OSM: https://github.com/OsmiumOP/OSM-QBUS-Scripts
+
+## Support  
+Please report any issues you have in the GitHub [Issues](https://github.com/istoking/coupons/issues)
